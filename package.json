@@ -1,6 +1,6 @@
 {
   "name": "@gluefx/ag-psd",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Library for reading and writing PSD files",
   "main": "dist/index.js",
   "module": "dist-es/index.js",
