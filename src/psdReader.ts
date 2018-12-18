@@ -352,9 +352,12 @@ function readLayerRecord(reader: PsdReader) {
 function readLayerMaskData(reader: PsdReader) {
 	readSection(reader, 1, left => {
 		/* istanbul ignore if */
-		if (left()) {
-			throw new Error(`Not Implemented: layer mask data`);
-		}
+		// if (left()) {
+		// 	throw new Error(`Not Implemented: layer mask data`);
+		// }
+
+		// 2018-12-18: just bypass Layer Mask, so you can preview whole psd without each layer's Image Data
+		skipBytes(reader, left());
 	});
 }
 
